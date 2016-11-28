@@ -1,0 +1,33 @@
+# Site settings
+email: saa13b@my.fsu.edu
+baseurl: ""
+paginate: 5
+paginate_path: "/blog/page-:num"
+google_analytics:
+
+# SEO settings
+title: What Simon Said
+description:
+url: ""
+twitter_username: sharcylol
+default_img: https://scontent-mia1-2.xx.fbcdn.net/v/t1.0-9/10403693_10205023489407705_2840375951874647373_n.jpg?oh=8707697110fad58d4fc28eb715bad243&oe=58C2F3C0
+
+# Profile settings
+name: Simon Aizpurua
+profile_img: https://scontent-mia1-2.xx.fbcdn.net/v/t1.0-9/10403693_10205023489407705_2840375951874647373_n.jpg?oh=8707697110fad58d4fc28eb715bad243&oe=58C2F3C0
+profile: Hi, I'm Simon! What you'll find on this website is a collection of projects I'm working on, interesting links, and my personal thoughts. My hobbies include Photography, Soccer, Coding, and Traveling. West Coast or BUST!
+social:
+  github: http://www.github.com/Sharcee
+
+# Build settings
+include: ["_categories"]
+exclude: ["_screenshots", "Gemfile", "Gemfile.lock"]
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
+
+# Sass
+sass:
+  style: compressed
+
+# Gems
+gems: [jekyll-paginate, jekyll-sitemap, octopress-autoprefixer]

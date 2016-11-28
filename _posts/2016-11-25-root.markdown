@@ -1,0 +1,19 @@
+---
+layout: post
+title:  "The Kiddie Pool"
+date:   2016-11-25
+categories:
+  - Programming
+description:
+image: http://wallpaperrs.com/uploads/nature/earth-iceberg-nature-landscape-city-mountain-ocean-moon-sun-sunset-sunlight-hdr-hd-ultra-hd-ice-peng-14297835319.jpg
+image-sm: http://wallpaperrs.com/uploads/nature/earth-iceberg-nature-landscape-city-mountain-ocean-moon-sun-sunset-sunlight-hdr-hd-ultra-hd-ice-peng-14297835319.jpg
+---
+What makes a good programmer?
+
+The answer isn't a makefile and you won't find your answer covered in the textbook. It isn't just about being able to *string* together a programming assignment just hours before the stroke of midnight. It isn't even about being able to quickly write code that can run in O(1) constant time. It is about having the motivation to go beyond the material presented in class.
+
+The way I see it, coding in a new language is just like learning how to swim for the first time. The rubber duck floaties are on and the pool is only about two feet deep. The material needed to learn the basics doesn't require much thought and you happily jump in. Congrats, you are now in the kiddie pool.
+
+One day, you decide that the kiddie pool just doesn't excite you anymore. You decide to take the floaties off and dive straight in to the big pool without a care in the world. While you find yourself overwhelmed with the sheer depth of the pool, you find that the longer as you stay in the pool, the stronger a swimmer you become. Coding works exactly the same way. [Always Be Coding][ABC]
+
+[ABC]: https://medium.com/always-be-coding/abc-always-be-coding-d5f8051afce2#.ow2v7q2vd
