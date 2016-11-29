@@ -4,5 +4,4 @@ group :jekyll_plugins do
   gem "jekyll-paginate"
   gem "jekyll-sitemap"
   gem "octopress-autoprefixer"
-  gem 'octopress-video-tag'
 end
