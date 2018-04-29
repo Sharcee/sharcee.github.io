@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "Can you name a state without the letter .. in it?"
+title:  "Python - Elimination"
 date:   2018-4-29
 categories:
   - Programming
 description:
-image: http://www.worldstadiums.com/north_america/maps/united_states.gif
-image-sm: http://www.worldstadiums.com/north_america/maps/united_states.gif
+image: https://www.nasa.gov/sites/default/files/images/712129main_8247975848_88635d38a1_o.jpg
+image-sm: https://www.nasa.gov/sites/default/files/images/712129main_8247975848_88635d38a1_o.jpg
+excerpt: "Name a state without the letter E in it"
 ---
 
 {% highlight python %}
