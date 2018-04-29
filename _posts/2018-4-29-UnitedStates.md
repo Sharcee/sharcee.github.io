@@ -1,9 +1,10 @@
 ---
 layout: post
-title:  "Python - Elimination"
+title:  "Filtering from a list"
 date:   2018-4-29
 categories:
   - Programming
+  - Python
 description:
 image: https://www.nasa.gov/sites/default/files/images/712129main_8247975848_88635d38a1_o.jpg
 image-sm: https://www.nasa.gov/sites/default/files/images/712129main_8247975848_88635d38a1_o.jpg
