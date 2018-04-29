@@ -10,8 +10,7 @@ image-sm: https://www.nasa.gov/sites/default/files/images/712129main_8247975848_
 excerpt: "Name a state without the letter E in it"
 ---
 
-{% highlight python %}
-
+```
 states = { 'Alabama','Alaska','Arizona','Arkansas','California','Colorado',
          'Connecticut','Delaware','Florida','Georgia','Hawaii','Idaho', 
          'Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana',
@@ -35,5 +34,4 @@ for word in states:
         bank.append(word)
 
 print(bank)
-
-{% endhighlight %}
+```
