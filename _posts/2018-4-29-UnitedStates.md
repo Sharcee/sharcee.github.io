@@ -11,6 +11,7 @@ excerpt: "Name a state without the letter E in it"
 ---
 
 {% highlight python %}
+
 states = { 'Alabama','Alaska','Arizona','Arkansas','California','Colorado',
          'Connecticut','Delaware','Florida','Georgia','Hawaii','Idaho', 
          'Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana',
@@ -34,4 +35,5 @@ for word in states:
         bank.append(word)
 
 print(bank)
+
 {% endhighlight %}
