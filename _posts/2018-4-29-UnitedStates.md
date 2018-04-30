@@ -11,7 +11,29 @@ image-sm: https://www.nasa.gov/sites/default/files/images/712129main_8247975848_
 excerpt: "Name a state without the letter E in it"
 ---
 
+
+
+```python
+# @Problem
+# Can you name a state without the letter E in it?
+
+# @Type
+# IF/THEN
+
+# @Object
+# Word
+
+# @Analysis
+# if Letter not in State, Print
+
+# @Approach
+# Find list of states.
+# Build contains(letter, word)
+# Run contains on bank
 ```
+
+
+```python
 states = { 'Alabama','Alaska','Arizona','Arkansas','California','Colorado',
          'Connecticut','Delaware','Florida','Georgia','Hawaii','Idaho', 
          'Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana',
@@ -36,3 +58,5 @@ for word in states:
 
 print(bank)
 ```
+
+    ['Mississippi', 'Oklahoma', 'Wyoming', 'Alaska', 'Illinois', 'Arkansas', 'Indiana', 'Louisiana', 'Iowa', 'Wisconsin', 'Arizona', 'Michigan', 'Kansas', 'Utah', 'Virginia', 'California', 'North Dakota', 'Florida', 'Hawaii', 'Missouri', 'Ohio', 'Alabama', 'South Dakota', 'Colorado', 'Idaho', 'Washington', 'North Carolina', 'Montana', 'South  Carolina']
