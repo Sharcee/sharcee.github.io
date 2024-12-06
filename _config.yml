@@ -7,17 +7,16 @@ google_analytics:
 
 # SEO settings
 title: What Simon Said
-description:
+description: A software engineer's musings on code, AI, and the digital frontier.
 url: ""
-twitter_username: sharcylol
-default_img: https://scontent-mia1-2.xx.fbcdn.net/v/t1.0-9/10403693_10205023489407705_2840375951874647373_n.jpg?oh=8707697110fad58d4fc28eb715bad243&oe=58C2F3C0
+twitter_username:
+default_img: 
 
 # Profile settings
 name: Simon Aizpurua
-profile_img: https://scontent-mia1-2.xx.fbcdn.net/v/t1.0-9/10403693_10205023489407705_2840375951874647373_n.jpg?oh=8707697110fad58d4fc28eb715bad243&oe=58C2F3C0
-profile: Hi, I'm Simon! What you'll find on this website is a collection of projects I'm working on, interesting links, and my personal thoughts. My hobbies include Photography, Soccer, Coding, and Traveling. West Coast or BUST!
-social:
-  github: http://www.github.com/Sharcee
+profile_img: assets/images/img_8192.jpg
+profile: I am a software engineer working remotely. I work on things that interest me. AI currently under the scope
+.  github: http://www.github.com/Sharcee
 
 # Build settings
 include: ["_categories"]
@@ -28,6 +27,7 @@ permalink: /:year/:month/:day/:title/
 # Sass
 sass:
   style: compressed
+  sourcemap: never
 
 # Gems
-gems: [jekyll-paginate, jekyll-sitemap, octopress-autoprefixer]
+gems: [jekyll-paginate, jekyll-sitemap, jekyll-autoprefixer]

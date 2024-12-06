@@ -1,106 +1,92 @@
-var Tabs = (function() {
-  var s;
-
-  return {
-    settings: {
-      tabs: document.getElementsByClassName('tabs__item'),
-      tab: document.getElementsByClassName('tab')
-    },
-
-    init: function() {
-      s = this.settings;
-      this.display();
-      this.click();
-    },
-
-    display: function() {
-      if (s.tab.length) {
-        [].forEach.call(s.tab, function(tab) {
-          tab.style.display = 'none';
-        });
-        s.tab[0].style.display = 'block';
-        s.tab[0].classList.add('active');
-        s.tabs[0].classList.add('active');
-      }
-    },
-
-    click: function() {
-      if (s.tabs.length) {
-        var currentIdx = 0,
-            prevIdx = currentIdx;
-
-        [].forEach.call(s.tabs, function(tab, idx) {
-          tab.addEventListener('click', function() {
-            prevIdx = currentIdx;
-            currentIdx = idx;
-
-            if (prevIdx !== currentIdx) {
-              s.tab[prevIdx].style.display = 'none';
-              s.tab[prevIdx].classList.remove('active');
-              s.tabs[prevIdx].classList.remove('active');
-              s.tab[currentIdx].style.display = 'block';
-              s.tab[currentIdx].classList.add('active');
-              s.tabs[currentIdx].classList.add('active');
-            }
-          });
-        });
-      }
-    }
-
+class Tabs {
+  constructor() {
+    this.tabs = document.querySelectorAll('.tabs__item');
+    this.tabPanels = document.querySelectorAll('.tab');
+    this.currentIdx = 0;
   }
-})();
 
-var Preview = (function() {
-  var s;
-
-  return {
-    settings: {
-      img: document.getElementsByClassName('preview__img'),
-      post: document.getElementsByClassName('preview')
-    },
-
-    init: function() {
-      s = this.settings;
-      this.display();
-      this.mouseenter();
-    },
-
-    display: function() {
-      if (s.img.length) {
-        [].forEach.call(s.img, function(img) {
-          img.style.display = 'none';
-        });
-        s.img[0].style.display = 'block';
-      }
-    },
-
-    mouseenter: function() {
-      if (s.post.length) {
-        var currentIdx = 0,
-            prevIdx = currentIdx;
-
-        [].forEach.call(s.post, function(preview, idx) {
-          preview.addEventListener('mouseenter', function() {
-            prevIdx = currentIdx;
-            currentIdx = idx;
-
-            if (prevIdx !== currentIdx) {
-              s.img[prevIdx].style.display = 'none';
-              s.img[currentIdx].style.display = 'block';
-            }
-          });
-        });
-      }
-    }
+  init() {
+    this.display();
+    this.setupEventListeners();
   }
-})();
 
-var wow = new WOW({
-  animateClass: 'fade-in'
-});
+  display() {
+    if (!this.tabPanels.length) return;
+    
+    this.tabPanels.forEach(tab => tab.style.display = 'none');
+    this.tabPanels[0].style.display = 'block';
+    this.tabPanels[0].classList.add('active');
+    this.tabs[0].classList.add('active');
+  }
 
-document.addEventListener('DOMContentLoaded', function() {
-  Tabs.init();
-  Preview.init();
+  setupEventListeners() {
+    if (!this.tabs.length) return;
+
+    this.tabs.forEach((tab, idx) => {
+      tab.addEventListener('click', () => this.switchTab(idx));
+    });
+  }
+
+  switchTab(newIdx) {
+    if (this.currentIdx === newIdx) return;
+
+    // Remove active state from previous tab
+    this.tabPanels[this.currentIdx].style.display = 'none';
+    this.tabPanels[this.currentIdx].classList.remove('active');
+    this.tabs[this.currentIdx].classList.remove('active');
+
+    // Add active state to new tab
+    this.tabPanels[newIdx].style.display = 'block';
+    this.tabPanels[newIdx].classList.add('active');
+    this.tabs[newIdx].classList.add('active');
+
+    this.currentIdx = newIdx;
+  }
+}
+
+class Preview {
+  constructor() {
+    this.images = document.querySelectorAll('.preview__img');
+    this.previews = document.querySelectorAll('.preview');
+    this.currentIdx = 0;
+  }
+
+  init() {
+    this.display();
+    this.setupEventListeners();
+  }
+
+  display() {
+    if (!this.images.length) return;
+    
+    this.images.forEach(img => img.style.display = 'none');
+    this.images[0].style.display = 'block';
+  }
+
+  setupEventListeners() {
+    if (!this.previews.length) return;
+
+    this.previews.forEach((preview, idx) => {
+      preview.addEventListener('mouseenter', () => this.switchImage(idx));
+    });
+  }
+
+  switchImage(newIdx) {
+    if (this.currentIdx === newIdx) return;
+
+    this.images[this.currentIdx].style.display = 'none';
+    this.images[newIdx].style.display = 'block';
+    this.currentIdx = newIdx;
+  }
+}
+
+// Initialize everything when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+  const tabs = new Tabs();
+  const preview = new Preview();
+  const wow = new WOW({ animateClass: 'fade-in' });
+
+  tabs.init();
+  preview.init();
   wow.init();
 });
